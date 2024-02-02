@@ -30,7 +30,7 @@ export const getLoginInfoFromURL = () => {
 
     const filteredLoginInfo = loginInfo.filter((login) =>
         ["loginid", "token", "currency"].every((k) => Object.keys(login).includes(k))
-    );
+    ) as AccountInfo[];
 
     return { loginInfo: filteredLoginInfo, paramsToDelete };
 };
