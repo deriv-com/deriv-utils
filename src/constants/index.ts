@@ -1,2 +1,4 @@
-export * as AppIDConstants from "./app-id.constants";
-export * as LocalStorageConstants from "./localstorage.constants";
+import * as AppIDConstants from "./app-id.constants";
+import * as LocalStorageConstants from "./localstorage.constants";
+
+export { AppIDConstants, LocalStorageConstants };

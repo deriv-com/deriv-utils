@@ -1,5 +1,7 @@
-export * as ObjectUtils from "./object.utils";
-export * as FormatUtils from "./format.utils";
-export * as LocalStorageUtils from "./localstorage.utils";
-export * as URLUtils from "./url.utils";
-export * as WebSocketUtils from "./websocket.utils";
+import * as ObjectUtils from "./object.utils";
+import * as FormatUtils from "./format.utils";
+import * as LocalStorageUtils from "./localstorage.utils";
+import * as URLUtils from "./url.utils";
+import * as WebSocketUtils from "./websocket.utils";
+
+export { ObjectUtils, FormatUtils, LocalStorageUtils, URLUtils, WebSocketUtils };
