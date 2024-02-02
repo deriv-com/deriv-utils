@@ -1,7 +1,7 @@
 {
     "name": "@deriv-com/utils",
     "private": false,
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A utility library for Deriv web apps.",
     "author": "deriv",
     "homepage": "https://deriv.com",
