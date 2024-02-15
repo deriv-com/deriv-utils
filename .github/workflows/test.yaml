@@ -21,6 +21,6 @@ jobs:
             - name: "Install Deps"
               run: npm install
             - name: "Test"
-              run: npm run vitest:coverage
+              run: npx vitest run --coverage.enabled --coverage.provider=v8 --coverage.reporter=json-summary --coverage.reporter=json
             - name: "Report Coverage"
               uses: davelosert/vitest-coverage-report-action@v2
