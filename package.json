@@ -39,12 +39,12 @@
         "prepublishOnly": "npm run test"
     },
     "devDependencies": {
-        "@types/node": "^20.11.16",
+        "@types/node": "^20.11.18",
         "@vitest/coverage-istanbul": "^1.2.2",
         "@vitest/coverage-v8": "^1.2.2",
         "happy-dom": "^13.3.8",
         "typescript": "^5.3.3",
-        "vite": "^5.0.12",
+        "vite": "^5.1.2",
         "vite-plugin-dts": "^3.7.2",
         "vitest": "^1.2.2"
     }
