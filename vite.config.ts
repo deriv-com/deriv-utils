@@ -13,7 +13,9 @@ export default defineConfig({
         },
     },
     test: {
+        coverage: {
+            provider: "istanbul",
+        },
         environment: "happy-dom",
-        reporters: ["json-summary"],
     },
 });
