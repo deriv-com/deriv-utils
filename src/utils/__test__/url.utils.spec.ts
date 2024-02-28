@@ -1,6 +1,7 @@
 import { describe, test, expect, vitest, beforeEach } from "vitest";
 import { URLUtils } from "../index";
 import { LocalStorageConstants } from "../..";
+import { LoginInfo } from "../url.utils";
 
 function setSearchParam(queryString: string) {
     Object.defineProperty(window, "location", {
@@ -84,6 +85,63 @@ describe("URLUtils.getLoginInfoFromURL", () => {
         };
         const output = URLUtils.getLoginInfoFromURL();
         expect(output).toStrictEqual(expected);
+    });
+});
+
+describe("URLUtils.getDefaultActiveAccount", () => {
+    test("should return virtual account as default", () => {
+        const inputLoginInfo: LoginInfo[] = [
+            {
+                loginid: "MF104911",
+                currency: "GBP",
+                token: "A1-securityplzdontflagme",
+            },
+            {
+                loginid: "CR109302",
+                currency: "USD",
+                token: "A1-somerandomtokens",
+            },
+            {
+                loginid: "VRTC100041",
+                currency: "USD",
+                token: "A1-invalidtoken",
+            },
+        ];
+
+        const defaultAccount = URLUtils.getDefaultActiveAccount(inputLoginInfo);
+        expect(defaultAccount).toStrictEqual({
+            loginid: "VRTC100041",
+            currency: "USD",
+            token: "A1-invalidtoken",
+        });
+    });
+
+    test("should return first account if no VR account is present", () => {
+        const inputLoginInfo: LoginInfo[] = [
+            {
+                loginid: "MF104911",
+                currency: "GBP",
+                token: "A1-securityplzdontflagme",
+            },
+            {
+                loginid: "CR109300",
+                currency: "USD",
+                token: "A1-somethingsomething",
+            },
+            {
+                loginid: "CR109302",
+                currency: "USD",
+                token: "A1-somerandomtokens",
+            },
+        ];
+
+        const defaultAccount = URLUtils.getDefaultActiveAccount(inputLoginInfo);
+        expect(defaultAccount).toBe(inputLoginInfo[0]);
+    });
+
+    test("should return undefined if no logininfo is present", () => {
+        const defaultAccount = URLUtils.getDefaultActiveAccount(undefined);
+        expect(defaultAccount).toBeUndefined();
     });
 });
 
