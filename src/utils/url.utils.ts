@@ -4,23 +4,23 @@ import { getActiveLoginid, getAppId, getEnvironmentFromLoginid } from "./websock
 
 /**
  * Defines the structure for account information.
- * @typedef {Object} AccountInfo
+ * @typedef {Object} LoginInfo
  * @property {string} loginid - The loginid for the account.
  * @property {string} currency - The currency code for the account.
  * @property {string} token - The authentication token for the account.
  */
-export type AccountInfo = { loginid: string; currency: string; token: string };
+export type LoginInfo = { loginid: string; currency: string; token: string };
 
 /**
- * Extracts the login information from the URL's query parameters.
+ * Extracts the login information from thxe URL's query parameters.
  * This function parses the window's current URL search parameters looking for account, token, and currency information.
- * It constructs an array of partially formed `AccountInfo` objects and filters out any entries that do not have all required properties.
+ * It constructs an array of partially formed `LoginInfo` objects and filters out any entries that do not have all required properties.
  * It also returns a list of parameter keys that are related to account information and can be deleted.
  *
- * @returns {{loginInfo: AccountInfo[], paramsToDelete: string[]}} An object containing an array of `AccountInfo` objects and an array of parameter keys to delete.
+ * @returns {{loginInfo: LoginInfo[], paramsToDelete: string[]}} An object containing an array of `LoginInfo` objects and an array of parameter keys to delete.
  */
 export const getLoginInfoFromURL = () => {
-    const loginInfo: Partial<AccountInfo>[] = [];
+    const loginInfo: Partial<LoginInfo>[] = [];
     const paramsToDelete: string[] = [];
     const searchParams = new URLSearchParams(window.location.search);
 
@@ -52,9 +52,22 @@ export const getLoginInfoFromURL = () => {
 
     const filteredLoginInfo = loginInfo.filter((login) =>
         ["loginid", "token", "currency"].every((k) => Object.keys(login).includes(k)),
-    ) as AccountInfo[];
+    ) as LoginInfo[];
 
     return { loginInfo: filteredLoginInfo, paramsToDelete };
+};
+
+/**
+ * Retrieves the default active account from a list of login information.
+ * The default account is determined by finding the first account with a login ID that starts with "VR".
+ * If no such account is found, the first account in the list is returned.
+ *
+ * @param {LoginInfo[]} loginInfo - An array of login information.
+ * @returns {LoginInfo} The default active account based on the specified criteria. If the list is empty, `undefined` is returned.
+ */
+export const getDefaultActiveAccount = (loginInfo?: LoginInfo[]) => {
+    if (!loginInfo?.length) return;
+    return loginInfo.find((acc) => /^VR/.test(acc.loginid)) || loginInfo[0];
 };
 
 /**
