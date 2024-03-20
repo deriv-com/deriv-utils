@@ -179,6 +179,12 @@ export const patterns = {
      */
     uppercase: /[A-Z]/,
     /**
+     * @regex /^.{8,16}$/
+     * @description This pattern matches any string that contains 8-16 characters.
+     * @example ValidationConstants.patterns.between8and16Characters.test("Password1!")
+     */
+    between8and16Characters: /^.{8,16}$/,
+    /**
      * @regex /^.{8,25}$/
      * @description This pattern matches any string that contains 8-25 characters.
      * @example ValidationConstants.patterns.between8and25Characters.test("Password1!")
