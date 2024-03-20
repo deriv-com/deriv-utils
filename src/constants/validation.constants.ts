@@ -5,7 +5,7 @@ export const messagesHints = {
      * @example `Special characters permitted: ${ValidationConstants.messagesHints.addressPermittedSpecialCharacters}`
      */
     addressPermittedSpecialCharacters: ". , ' : ; ( ) ° @ # / -",
-};
+} as const;
 
 export const patterns = {
     /**
