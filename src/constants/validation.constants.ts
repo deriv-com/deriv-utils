@@ -154,4 +154,34 @@ export const patterns = {
      * @example ValidationConstants.patterns.general.test("Password1!")
      */
     general: /[`~!@#$%^&*)(_=+[}{\]\\/";:?><|]+/,
+    /**
+     * @regex /[a-z]/
+     * @description This pattern matches any string that contains lowercase letters.
+     * @example ValidationConstants.patterns.lowercase.test("abc")
+     */
+    lowercase: /[a-z]/,
+    /**
+     * @regex /\d/
+     * @description This pattern matches any string that contains digits.
+     * @example ValidationConstants.patterns.number.test("pets123")
+     */
+    number: /\d/,
+    /**
+     * @regex /\W/
+     * @description This pattern matches any string that contains special characters.
+     * @example ValidationConstants.patterns.specialCharacter.test("Password1!")
+     */
+    specialCharacter: /\W/,
+    /**
+     * @regex /[A-Z]/
+     * @description This pattern matches any string that contains uppercase letters.
+     * @example ValidationConstants.patterns.uppercase.test("ABC")
+     */
+    uppercase: /[A-Z]/,
+    /**
+     * @regex /^.{8,25}$/
+     * @description This pattern matches any string that contains 8-25 characters.
+     * @example ValidationConstants.patterns.between8and25Characters.test("Password1!")
+     */
+    between8and25Characters: /^.{8,25}$/,
 } as const;
