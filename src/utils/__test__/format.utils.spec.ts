@@ -3,7 +3,7 @@ import { FormatUtils } from "..";
 
 describe("FormatUtils.formatMoney", () => {
     test("should format money properly if decimalPlaces is specified", () => {
-        const output = FormatUtils.formatMoney(3.14256791, { decimalPlaces: 4 });
+        const output = FormatUtils.formatMoney(3.14256791, { decimalPlaces: 'BROKEN INTENTIONALLY' });
         expect(output).toBe("3.1426");
     });
 
