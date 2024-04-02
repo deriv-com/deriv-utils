@@ -50,4 +50,4 @@ jobs:
       - name: Report Coverage
         uses: markwylde-deriv/vitest-coverage-report-action@main
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
