@@ -27,3 +27,5 @@ jobs:
         uses: davelosert/vitest-coverage-report-action@v2
         with:
           github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
