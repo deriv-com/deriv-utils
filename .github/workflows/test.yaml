@@ -4,17 +4,37 @@ on:
   pull_request:
 
 permissions:
-  contents: read
-  pull-requests: write
+  actions: write
+  checks: write
+  contents: write
+  deployments: write
+  id-token: write
   issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
 
 jobs:
   test:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      pull-requests: write
+      actions: write
+      checks: write
+      contents: write
+      deployments: write
+      id-token: write
       issues: write
+      discussions: write
+      packages: write
+      pages: write
+      pull-requests: write
+      repository-projects: write
+      security-events: write
+      statuses: write
 
     steps:
       - name: Checkout
