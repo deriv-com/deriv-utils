@@ -22,7 +22,7 @@ jobs:
             - name: "Install Deps"
               run: npm install
             - name: "Test"
-              run: npx vitest run test:coverage
+              run: npm run test:coverage
             - name: "Report Coverage"
               uses: davelosert/vitest-coverage-report-action@v2
             - name: Coveralls
