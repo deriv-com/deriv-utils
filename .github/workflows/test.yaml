@@ -23,7 +23,5 @@ jobs:
               run: npm install
             - name: "Test"
               run: npm run test:coverage
-            - name: "Report Coverage"
-              uses: davelosert/vitest-coverage-report-action@v2
             - name: Coveralls
               uses: coverallsapp/github-action@3dfc5567390f6fa9267c0ee9c251e4c8c3f18949
