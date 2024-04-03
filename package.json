@@ -34,7 +34,7 @@
         "build": "tsc && vite build",
         "test": "vitest run",
         "test:dev": "vitest watch",
-        "test:coverage": "vitest run --coverage.enabled --coverage.provider=istanbul --coverage.reporter=json-summary --coverage.reporter=json",
+        "test:coverage": "vitest run --coverage.enabled",
         "prepare": "rm -rf ./dist && npm run build",
         "prepublishOnly": "npm run test"
     },
