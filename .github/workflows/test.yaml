@@ -1,6 +1,9 @@
 name: Run Unit Tests
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     types: [opened, synchronize, edited]
 
