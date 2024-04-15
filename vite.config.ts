@@ -16,7 +16,7 @@ export default defineConfig({
         coverage: {
             reporter: "lcov",
             provider: "v8",
-            exclude: ["**/*.{yml}", "**/*.{config,utils}.*", ".eslintrc.cjs", "node_modules", "dist"],
+            exclude: ["**/*.{yml}", "**/*.{config,utils}.*", ".eslintrc.cjs", "node_modules", "dist", "utils-docs"],
         },
         environment: "happy-dom",
     },
