@@ -42,7 +42,9 @@
         "test": "npm run lint && npm run prettier && npm run test:coverage",
         "prepublishOnly": "npm run test:vitest",
         "prepublish": "npm run rebuild && npm run test",
-        "commitlint": "commitlint --edit"
+        "commitlint": "commitlint --edit",
+        "deployDocs": "cd ./utils-docs && npm run build",
+        "deploy": "npm run deployDocs && gh-pages -d ./utils-docs/build"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.2.1",
