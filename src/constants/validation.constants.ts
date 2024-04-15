@@ -26,6 +26,13 @@ export const patterns = {
      **/
     addressCity: /^\p{L}[\p{L}\s'.-]{0,49}$/u,
     /**
+     * @regex /^[\p{L}\p{Nd}\s'.,-;]{0,100}$/u
+     * @description This pattern matches any string that contains up to 100 characters composed of Unicode letters, Unicode digits, whitespace characters, apostrophes, periods, commas, hyphens, and semicolons ( '.,-;).
+     * @example ValidationConstants.patterns.addressState.test("New York")
+     * @example ValidationConstants.patterns.addressState.test("Québec")
+     **/
+    addressState: /^[\p{L}\p{Nd}\s'.,-;]{0,100}$/u,
+    /**
      * @regex /^(?=.{1,20}$)[+-]?[0-9]+\.?[0-9]*$/
      * @description This pattern matches any string with 0-9 characters (numeric values. i.e. both integers and floats), and may contain a '+' or '-' sign.
      * @example ValidationConstants.patterns.barrier.test("123")
@@ -84,12 +91,12 @@ export const patterns = {
      **/
     paymentAgentEmail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,255}$/,
     /**
-     * @regex /^([A-Za-z0-9][A-Za-z0-9\\s-]{0,20})?$/
+     * @regex /^([A-Za-z0-9][A-Za-z0-9\s-]{0,20})?$/
      * @description This pattern matches any string with no more than 20 characters and may not contain '+'.
      * @example ValidationConstants.patterns.postalCode.test("123")
      * @example ValidationConstants.patterns.postalCode.test("123-456")
      **/
-    postalCode: /^([A-Za-z0-9][A-Za-z0-9\\s-]{0,20})?$/,
+    postalCode: /^([A-Za-z0-9][A-Za-z0-9\s-]{0,20})?$/,
     /**
      * @regex /^(?!^$|\s+)[A-Za-z0-9.\/\s-]{0,25}$/
      * @description This pattern matches any string with 0-25 characters, and may contain alphanumeric characters (both uppercase and lowercase), and any of these characters'./-', and or sapce characters
