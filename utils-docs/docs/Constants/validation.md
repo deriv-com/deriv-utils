@@ -42,6 +42,16 @@ This pattern matches any string with no more than **50** characters.
 addressCity: /^\p{L}[\p{L}\s'.-]{0,49}$/u;
 ```
 
+### addressState
+
+This pattern matches any string that contains up to **100** characters composed of Unicode letters, Unicode digits, whitespace characters, apostrophes, periods, commas, hyphens, and semicolons `( '.,-;)`.
+
+```JS
+// @example ValidationConstants.patterns.addressState.test("New York")
+// @example ValidationConstants.patterns.addressState.test("Québec")
+addressState: /^[\p{L}\p{Nd}\s'.,-;]{0,100}$/u,
+```
+
 ### barrier
 
 This pattern matches any string with **0-9** characters (numeric values. i.e. both integers and floats), and may contain a `'+'` or `'-'` sign.
@@ -131,7 +141,7 @@ This pattern matches any string with no more than **20** characters and may not 
 ```JS
 // @example ValidationConstants.patterns.postalCode.test("123")
 // @example ValidationConstants.patterns.postalCode.test("123-456")
-postalCode: /^([A-Za-z0-9][A-Za-z0-9\\s-]{0,20})?$/;
+postalCode: /^([A-Za-z0-9][A-Za-z0-9\s-]{0,20})?$/;
 ```
 
 ### taxIdentificationNumber
