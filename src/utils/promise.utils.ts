@@ -10,7 +10,7 @@
  * - `resolve`: A function that, when called with a value of type T, resolves the promise.
  * - `reject`: A function that, when called with a reason of type U (defaults to unknown), rejects the promise.
  */
-export const createPromise = <T, U = unknown>() => {
+export const createPromise = <T = unknown, U = unknown>() => {
     let deferredResolve!: (value: T) => void;
     let deferredReject!: (reason: U) => void;
 
