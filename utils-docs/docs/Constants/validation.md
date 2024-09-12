@@ -155,11 +155,11 @@ taxIdentificationNumber: /^(?!^$|\s+)[A-Za-z0-9.\/\s-]{0,25}$/;
 
 ### phoneNumber
 
-This pattern matches any string that starts with a `'+'` character, followed by `9-35` digits, allowing hyphens or spaces.
+This pattern matches any string that starts with a `'+'` character, followed by `9-20` digits, allowing hyphens or spaces.
 
 ```JS
 // @example ValidationConstants.patterns.phoneNumber.test("+1234567890")
-phoneNumber: /^\+((-|\s)*[0-9]){9,35}$/;
+phoneNumber: /^\+((-|\s)*[0-9]){9,20}$/;
 ```
 
 ### fileType
