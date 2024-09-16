@@ -94,3 +94,26 @@ describe("LocalStorageUtils.setValue", () => {
         expect(window.localStorage.setItem).toBeCalledWith("ui.theme", expected);
     });
 });
+
+describe("isValidJson", () => {
+    test("should return true for a valid JSON string", () => {
+        expect(LocalStorageUtils.isValidJson("{}")).toBe(true);
+        expect(LocalStorageUtils.isValidJson('{"key":"value"}')).toBe(true);
+        expect(LocalStorageUtils.isValidJson("[1, 2, 3]")).toBe(true);
+        expect(LocalStorageUtils.isValidJson('"string"')).toBe(true);
+        expect(LocalStorageUtils.isValidJson("true")).toBe(true);
+        expect(LocalStorageUtils.isValidJson("null")).toBe(true);
+    });
+
+    test("should return false for an invalid JSON string", () => {
+        expect(LocalStorageUtils.isValidJson("{key:value}")).toBe(false);
+        expect(LocalStorageUtils.isValidJson('"unclosed string')).toBe(false);
+        expect(LocalStorageUtils.isValidJson('{ "key": }')).toBe(false);
+        expect(LocalStorageUtils.isValidJson("[1, 2, 3")).toBe(false);
+    });
+
+    test("should return false for non-JSON strings", () => {
+        expect(LocalStorageUtils.isValidJson("")).toBe(false);
+        expect(LocalStorageUtils.isValidJson("random text")).toBe(false);
+    });
+});

@@ -130,6 +130,7 @@ dist
 .pnp.*
 
 .DS_Store
+.idea
 
 *.env
 .env.*
