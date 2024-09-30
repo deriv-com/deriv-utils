@@ -174,11 +174,11 @@ export const patterns = {
      */
     number: /\d/,
     /**
-     * @regex /\W/
-     * @description This pattern matches any string that contains special characters.
+     * @regex /[^\w\s£]/
+     * @description This pattern matches any string that contains special characters, excluding the British pound sign (£).
      * @example ValidationConstants.patterns.specialCharacter.test("Password1!")
      */
-    specialCharacter: /\W/,
+    specialCharacter: /[^\w\s£]/,
     /**
      * @regex /[A-Z]/
      * @description This pattern matches any string that contains uppercase letters.
