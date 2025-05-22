@@ -31,7 +31,7 @@ export const patterns = {
      * @example ValidationConstants.patterns.addressState.test("New York")
      * @example ValidationConstants.patterns.addressState.test("Québec")
      **/
-    addressState: /^[\p{L}\p{Nd}\s'.,(),-;]{0,100}$/u,
+    addressState: /^[\p{L}\p{Nd}\s'.,();-]{0,100}$/u,
     /**
      * @regex /^(?=.{1,20}$)[+-]?[0-9]+\.?[0-9]*$/
      * @description This pattern matches any string with 0-9 characters (numeric values. i.e. both integers and floats), and may contain a '+' or '-' sign.
