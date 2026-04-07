@@ -12,11 +12,11 @@ This function asynchronously detects the mobile operating system based on the us
 
 #### Returns
 
--   `"Windows Phone"` if the user agent string indicates a Windows Phone device.
--   `"huawei"` if the user agent string indicates a Huawei device running Android.
--   `"Android"` if the user agent string indicates an Android device.
--   `"iOS"` if the user agent string indicates an iOS device (iPad, iPhone, or iPod).
--   `"unknown"` if the mobile operating system cannot be determined.
+- `"Windows Phone"` if the user agent string indicates a Windows Phone device.
+- `"huawei"` if the user agent string indicates a Huawei device running Android.
+- `"Android"` if the user agent string indicates an Android device.
+- `"iOS"` if the user agent string indicates an iOS device (iPad, iPhone, or iPod).
+- `"unknown"` if the mobile operating system cannot be determined.
 
 #### Usage
 

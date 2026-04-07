@@ -33,7 +33,7 @@ describe("BrandUtils.getBrandWebsiteName", () => {
     });
 });
 // mock
-const platforms = {
+const _platforms = {
     trader: "Deriv Trader",
     dBot: "Deriv Bot",
 };
@@ -45,7 +45,7 @@ describe("BrandUtils.getPlatformName", () => {
         const platformKey = "trader";
 
         // Call the function
-        const platformSettings = getPlatformName(platformKey as keyof typeof platforms);
+        const platformSettings = getPlatformName(platformKey as keyof typeof _platforms);
 
         // Assertion
         expect(platformSettings).toEqual("Deriv Trader");

@@ -8,8 +8,8 @@ Creates a deferred promise along with its resolve and reject functions. This all
 
 It returns an object containing:
 
--   **promise:** A `Promise<T>` that can be awaited or otherwise used.
--   **resolve:** A function that, when called with a value of type T, resolves the promise.
--   **reject:** A function that, when called with a reason, rejects the promise.
+- **promise:** A `Promise<T>` that can be awaited or otherwise used.
+- **resolve:** A function that, when called with a value of type T, resolves the promise.
+- **reject:** A function that, when called with a reason, rejects the promise.
 
 **Note:** `T` - The type of the value with which the promise will be resolved.

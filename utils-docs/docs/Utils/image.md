@@ -10,13 +10,13 @@ Compress an image and return it as a Blob by utilizing a Promise that resolves w
 
 #### Options
 
--   `src[required]: string` - The source image URL or data URI.
--   `filename[required]: string` - The desired filename for the compressed image.
--   `options[optional]: {maxWidth?: number; quality?: number;}` - Options for image compression.
+- `src[required]: string` - The source image URL or data URI.
+- `filename[required]: string` - The desired filename for the compressed image.
+- `options[optional]: {maxWidth?: number; quality?: number;}` - Options for image compression.
 
-        -- **maxWidth [default: 2560]** The maximum width for the compressed image.
+              -- **maxWidth [default: 2560]** The maximum width for the compressed image.
 
-        -- **quality [default: 0.9]** - The image quality (0 to 1) for compression.
+              -- **quality [default: 0.9]** - The image quality (0 to 1) for compression.
 
 ### convertToBase64
 
@@ -26,7 +26,7 @@ It returns a Promise that resolves with an object containing the Base64 image da
 
 #### Options
 
--   `file[required]: File` - The File object to convert to Base64.
+- `file[required]: File` - The File object to convert to Base64.
 
 ### isSupportedImageFormat
 
@@ -36,7 +36,7 @@ It returns **True** if the filename has a supported image format extension, **fa
 
 #### Options
 
--   `filename[required]: string` - The filename to check for a supported image format.
+- `filename[required]: string` - The filename to check for a supported image format.
 
 ### compressImageFile
 
@@ -46,7 +46,7 @@ It returns a Promise that resolves with the compressed image as a Blob. `Promise
 
 #### Options
 
--   `file[required]: File` - The File object to compress.
+- `file[required]: File` - The File object to compress.
 
 ### numToUint8Array
 
@@ -56,8 +56,8 @@ It returns `Uint8Array`.
 
 #### Options
 
--   `num[required]: number` - The number to convert to Uint8Array.
--   `arraySize[optional]: number` - default 4.
+- `num[required]: number` - The number to convert to Uint8Array.
+- `arraySize[optional]: number` - default 4.
 
 ### generateChunks
 
@@ -67,7 +67,7 @@ It returns an array of Uint8Array chunks. `Uint8Array[]`
 
 #### Options
 
--   `binary[required]: Uint8Array` - Uint8Array to be chunked.
+- `binary[required]: Uint8Array` - Uint8Array to be chunked.
 
 ### readFile
 
@@ -77,4 +77,4 @@ It returns a Promise that resolves with the file as a TFileObject. `Promise<{fil
 
 #### Options
 
--   `file[required]: Blob` - The file to read.
+- `file[required]: Blob` - The file to read.

@@ -23,7 +23,7 @@ export const getValue = <T>(key: TLocalStorageKeys) => {
 
     try {
         return JSON.parse(value) as T;
-    } catch (e) {
+    } catch (_e) {
         return null;
     }
 };

@@ -49,7 +49,7 @@ export const formatMoney = (number: number, options?: FormatMoneyOptions) => {
             maximumFractionDigits: fractionDigits,
         });
         return formatter.format(number);
-    } catch (e) {
+    } catch (_e) {
         return number.toString();
     }
 };

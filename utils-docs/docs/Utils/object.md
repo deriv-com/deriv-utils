@@ -28,9 +28,9 @@ Deeply merges multiple source objects into a target object. It merges individual
 
 #### Options
 
--   `target: T` - The target object to merge into.
--   `sources: DeepPartial<T>[]` - One or more source objects to merge into the target.
+- `target: T` - The target object to merge into.
+- `sources: DeepPartial<T>[]` - One or more source objects to merge into the target.
 
 #### Returns
 
--   `T` - The merged target object.
+- `T` - The merged target object.

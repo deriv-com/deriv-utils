@@ -83,9 +83,9 @@ Takes a **URL path** as input and removes certain characters from the beginning 
 
 It removes the following:
 
--   Any leading forward slash (/) at the beginning of the path.
--   Any trailing forward slash (/) at the end of the path.
--   Any characters that are not alphanumeric, hyphen, underscore, dot, forward slash, parentheses, or hash symbol.
+- Any leading forward slash (/) at the beginning of the path.
+- Any trailing forward slash (/) at the end of the path.
+- Any characters that are not alphanumeric, hyphen, underscore, dot, forward slash, parentheses, or hash symbol.
 
 It returns the formatted path without the specified characters.
 
@@ -106,8 +106,8 @@ It returns the formatted static URL.
 
 `options[optional]: { isDocument?: boolean; isEU?: boolean; }` - Optional configuration for customising the Deriv Static URL, including:
 
--   `isDocument`: Specifies whether the path represents a document.
--   `isEU`: Specifies whether the URL should be generated for the EU production environment.
+- `isDocument`: Specifies whether the path represents a document.
+- `isEU`: Specifies whether the URL should be generated for the EU production environment.
 
 ### isDomainAllowed
 

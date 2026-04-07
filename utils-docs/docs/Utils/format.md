@@ -18,9 +18,9 @@ It returns a **string** representing the formatted monetary value. If an error o
 
 `FormatMoneyOptions [optional]` - Optional configuration for formatting the money value, including:
 
--   **currency [Currency-optional]**: A Currency specifying the currency code to format the number with **Defaults to "USD"**.
--   **decimalPlaces [number-optional]**: The number of decimal places to display in the formatted string. If not specified, **Defaults to 2 decimal places**.
--   **locale [string-optional]**: The locale string to use for formatting the number, affecting the currency symbol position, thousand separator, and decimal point **Defaults to "en-US"**.
+- **currency [Currency-optional]**: A Currency specifying the currency code to format the number with **Defaults to "USD"**.
+- **decimalPlaces [number-optional]**: The number of decimal places to display in the formatted string. If not specified, **Defaults to 2 decimal places**.
+- **locale [string-optional]**: The locale string to use for formatting the number, affecting the currency symbol position, thousand separator, and decimal point **Defaults to "en-US"**.
 
 To use the **Currency** type, simply follow this step:
 
@@ -52,12 +52,12 @@ Converts and formats a given date input into a specified string format. To be us
 
 #### Options
 
--   `dateInput: Date | number | string [required]` - The date to be formatted. Can be a Date object, Unix timestamp, or a date string.
-    `GetFormattedDateStringOptions [optional]` - Optional configuration for formatting the date value, including:
+- `dateInput: Date | number | string [required]` - The date to be formatted. Can be a Date object, Unix timestamp, or a date string.
+  `GetFormattedDateStringOptions [optional]` - Optional configuration for formatting the date value, including:
 
--   **dateOptions: [Intl.DateTimeFormatOptions-optional]**: - Optional configuration for date formatting. Defaults to `{ day: "2-digit", month: "2-digit", year: "numeric" }`.
--   **format: [string-optional]**: The desired output format. Supported formats: `'YYYY-MM-DD'`, `'DD MMM YYYY'`, `'MMM DD YYYY'`, `'DD-MM-YYYY'`. Defaults to `'YYYY-MM-DD'`.
--   **unix: [boolean-optional]**: If `true`, treats the numeric input as a Unix timestamp.
+- **dateOptions: [Intl.DateTimeFormatOptions-optional]**: - Optional configuration for date formatting. Defaults to `{ day: "2-digit", month: "2-digit", year: "numeric" }`.
+- **format: [string-optional]**: The desired output format. Supported formats: `'YYYY-MM-DD'`, `'DD MMM YYYY'`, `'MMM DD YYYY'`, `'DD-MM-YYYY'`. Defaults to `'YYYY-MM-DD'`.
+- **unix: [boolean-optional]**: If `true`, treats the numeric input as a Unix timestamp.
 
 ### Returns:
 
@@ -83,8 +83,8 @@ Converts and formats a given date input into a time string in the `'HH:mm:ss GMT
 
 #### Options
 
--   `dateInput: Date | number | string [required]` - The date to be formatted. Can be a Date object, Unix timestamp, or date string.
--   `unix: boolean [optional]` - If `true`, treats the numeric input as a Unix timestamp.
+- `dateInput: Date | number | string [required]` - The date to be formatted. Can be a Date object, Unix timestamp, or date string.
+- `unix: boolean [optional]` - If `true`, treats the numeric input as a Unix timestamp.
 
 ### Returns:
 
@@ -110,9 +110,9 @@ Calculates a new date by adjusting the current date by a specified amount of day
 
 #### Options
 
--   `amount: number [required]` - The number of days or years to adjust the date by.
--   `type: "days" | "years" [optional]` - Specifies whether to adjust the date by days or years. Defaults to `"days"`.
--   `operation: "add" | "subtract" [optional]` - Specifies whether to add or subtract the amount from the current date. Defaults to `"add"`.
+- `amount: number [required]` - The number of days or years to adjust the date by.
+- `type: "days" | "years" [optional]` - Specifies whether to adjust the date by days or years. Defaults to `"days"`.
+- `operation: "add" | "subtract" [optional]` - Specifies whether to add or subtract the amount from the current date. Defaults to `"add"`.
 
 ### Returns:
 
@@ -136,15 +136,15 @@ Parses a cryptocurrency longcode string to extract the address hash and blockcha
 
 #### Options
 
--   `longcode: string [required]` - The cryptocurrency longcode string to parse.
+- `longcode: string [required]` - The cryptocurrency longcode string to parse.
 
 ### Returns:
 
 An object containing:
 
--   `addressHash: string` - The extracted address hash.
--   `blockchainHash: string` - The extracted blockchain hash.
--   `splitLongcode: string[]` - An array of the longcode split by commas.
+- `addressHash: string` - The extracted address hash.
+- `blockchainHash: string` - The extracted blockchain hash.
+- `splitLongcode: string[]` - An array of the longcode split by commas.
 
 ### Example:
 

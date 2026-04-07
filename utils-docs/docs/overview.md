@@ -8,10 +8,10 @@ This utility library provides a comprehensive suite of utilities designed to sup
 
 **This library is divided into two main namespaces:**
 
--   **Constants:**
-    The Constants namespace acts as a central hub for all static values and identifiers used across Deriv's web applications. It consolidates these values in one place, making it easier to maintain and update, ensuring consistent usage across components, and enhancing code readability and manageability.
--   **Utils:**
-    The Utils namespace provides a suite of utility functions and tools to simplify and improve web application development at Deriv. These utilities address common development challenges and tasks, enhancing efficiency, reliability, and maintainability throughout the development process.
+- **Constants:**
+  The Constants namespace acts as a central hub for all static values and identifiers used across Deriv's web applications. It consolidates these values in one place, making it easier to maintain and update, ensuring consistent usage across components, and enhancing code readability and manageability.
+- **Utils:**
+  The Utils namespace provides a suite of utility functions and tools to simplify and improve web application development at Deriv. These utilities address common development challenges and tasks, enhancing efficiency, reliability, and maintainability throughout the development process.
 
 ## Getting Started
 
@@ -48,4 +48,4 @@ We welcome contributions to the `@deriv-com/utils` library. If you have suggesti
 
 ## Notes
 
--   `@deriv-com/utils` outputs both ESM and CJS files but currently, this library only support code running in the browser environment. However, support for Node runtime is planned in the pipeline.
+- `@deriv-com/utils` outputs both ESM and CJS files but currently, this library only support code running in the browser environment. However, support for Node runtime is planned in the pipeline.
