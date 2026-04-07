@@ -59,8 +59,6 @@ For detailed documentation on each utility and constant, refer to the specific f
 
 We welcome contributions to the `@deriv-com/utils` library. If you have suggestions for improvements or find a bug, please open an issue or submit a pull request.
 
-**Note:** Don't forget to update the **utils-docs** alongside your changes to ensure comprehensive documentation.
-
 ## Notes
 
 - `@deriv-com/utils` outputs both ESM and CJS files but currently, this library only support code running in the browser environment. However, support for Node runtime is planned in the pipeline.

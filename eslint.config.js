@@ -5,7 +5,7 @@ import globals from "globals";
 
 export default [
     {
-        ignores: ["dist/**", "coverage/**", "eslint.config.js", "**/*.cjs", "**/*.mjs", "utils-docs/**"],
+        ignores: ["dist/**", "coverage/**", "eslint.config.js", "**/*.cjs", "**/*.mjs"],
     },
     js.configs.recommended,
     tsPlugin.configs["flat/eslint-recommended"],

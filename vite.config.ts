@@ -1,6 +1,5 @@
-/// <reference types="vitest" />
 import path from "path";
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
@@ -16,7 +15,7 @@ export default defineConfig({
         coverage: {
             reporter: "lcov",
             provider: "v8",
-            exclude: ["**/*.{yml}", "**/*.{config,utils}.*", ".eslintrc.cjs", "node_modules", "dist", "utils-docs"],
+            exclude: ["**/*.{yml}", "**/*.{config,utils}.*", ".eslintrc.cjs", "node_modules", "dist"],
         },
         environment: "happy-dom",
     },
